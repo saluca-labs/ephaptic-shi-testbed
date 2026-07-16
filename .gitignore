@@ -1,0 +1,13 @@
+# internal / deploy / scratch — not for the public repo
+outreach-levin-lab.md
+review.html
+build_artifact.py
+article-2-results-scaffold.md
+zenodo/
+__pycache__/
+*.pyc
+_err.txt
+paper/_err.txt
+paper/*.build.md
+paper/__pycache__/
+*.log
