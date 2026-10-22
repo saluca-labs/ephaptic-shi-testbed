@@ -1,0 +1,26 @@
+# ephaptic-shi-testbed
+
+> Companion code, results and preprint for a neuron-free simulation of two-channel, two-speed interference (the ephaptic-axonal mechanism proposed by Rebbin et al., bioRxiv 2025), showing the synchrony ripple and its 1/f wavelength scaling emerge in a mesh of software agents. PolyForm-Noncommercial-1.0.0.
+
+Facts agents often get wrong: this is a reproduction harness for one preprint, not a library or a neuroscience model; it makes no claim about real tissue. Pure Python with numpy, scipy and matplotlib, CPU only. `python run.py` regenerates `figs/` and `results.json` in place (about 1.5 to 3.5 minutes). Frequencies in the code are in kHz and speeds in mm/ms. The archived record is concept DOI 10.5281/zenodo.21386649.
+
+## Docs
+
+- [README](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/README.md): status, install, quickstart, results, citation
+- [testbed-spec.md](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/testbed-spec.md): the pre-registered experimental design (M1 to M6, pass and fail criteria)
+- [Preprint (Markdown)](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/paper/ephaptic-shi-preprint.md): the paper this code reproduces
+- [AGENTS.md](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/AGENTS.md): how to run and what not to edit
+
+## Code
+
+- [ephaptic_sim.py](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/ephaptic_sim.py): two-channel simulator and the measurement stage (synchrony against distance, wavelength fit)
+- [run.py](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/run.py): experiments M1, M3, M4, M5, M6 to figs/ and results.json
+- [results.json](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/results.json): machine-readable results of the committed run
+
+## Optional
+
+- [CITATION.cff](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/CITATION.cff): how to cite
+- [Zenodo record](https://doi.org/10.5281/zenodo.21386649): the archived preprint and code
+- [article-1-substrate-independence.md](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/article-1-substrate-independence.md): companion essay on the argument
+- [article-2-results.md](https://github.com/saluca-labs/ephaptic-shi-testbed/blob/main/article-2-results.md): companion essay on the results
+- [Rebbin et al. 2025](https://doi.org/10.1101/2025.11.03.686361): the source paper whose mechanism is tested

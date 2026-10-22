@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the archived record (concept DOI, resolves to the latest version)."
+title: "Ephaptic-Analog Testbed: a neuron-free testbed for two-channel, two-speed interference"
+type: software
+authors:
+  - family-names: Ruvalcaba
+    given-names: Cristian
+    affiliation: Saluca LLC
+  - name: Saluca Agentic AI Research Team
+doi: 10.5281/zenodo.21386649
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21386649
+    description: Zenodo concept DOI (all versions)
+repository-code: "https://github.com/saluca-labs/ephaptic-shi-testbed"
+license: PolyForm-Noncommercial-1.0.0
+date-released: 2026-07-16
+keywords:
+  - ephaptic coupling
+  - computational neuroscience
+  - multi-agent systems
+  - neuromorphic computing
+  - substrate independence
+  - reproducible research
+preferred-citation:
+  type: article
+  status: preprint
+  title: "The Second Wire Is Substrate-Independent: A Neuron-Free Testbed for Ephaptic-Axonal Interference"
+  authors:
+    - family-names: Ruvalcaba
+      given-names: Cristian
+      affiliation: Saluca LLC
+    - name: Saluca Agentic AI Research Team
+  doi: 10.5281/zenodo.21386649
+  publisher:
+    name: Zenodo
+  year: 2026
+  url: "https://doi.org/10.5281/zenodo.21386649"
