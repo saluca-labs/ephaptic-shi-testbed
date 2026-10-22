@@ -6,6 +6,30 @@ We build the motif in a substrate with **no neurons, no ions, and no ephaptic ph
 
 **This is analogy, not homology:** a model organism for a mechanism, one abstraction beyond a cell culture. It makes no claim about ion channels, astrocytes, or real cortex.
 
+## How it works
+
+One condition is many bursts. Each burst starts at a random source; every agent is armed by the
+fast channel and fires at the next tick its slow-channel phase is receptive. Synchrony against
+distance is then measured from the fire times, and the wavelength is read off that curve. Every
+box names a function in `ephaptic_sim.py`.
+
+```mermaid
+flowchart TD
+    IN["inputs: Array lattice, f_khz, v_ax, v_slow, n_bursts, seed"] --> RC["run_condition: RandomState(seed) samples n_bursts source points"]
+    RC -->|"one call per burst"| SB["simulate_burst"]
+    SB --> FA["fast channel: arm time d / v_ax"]
+    SB --> SL["slow channel: phase offset d / v_slow, or zero when slow_on=False"]
+    FA --> FI["step in dt ticks: fire when armed and cos(2 pi f (t - t0)) > recept, or when armed if slow_on=False; add jitter"]
+    SL --> FI
+    FI -->|"list of fire-time arrays, one per burst"| SV["synchrony_vs_distance: pairs firing within 2 ms, by distance bin, minus baseline"]
+    SV --> AN["analyze: _fit_exp and fit_wavelength on the curve"]
+    AN --> OUT["measured lam, resolved, rebound_frac, snr"]
+```
+
+The prediction `1/[f(1/v_ep - 1/v_ax)]` appears only in `run.py` (`pred_lambda`, `PRED_SLOPE`),
+where it is plotted next to the measurement. M6 takes the fire times down a different branch; see
+[Architecture](#architecture).
+
 ## Status
 
 Research artifact. This code reproduces the preprint *The Second Wire Is Substrate-Independent* (Zenodo, published 2026-07-16; see [Citation](#citation)). The repository has one commit (`c98cc5c`) and is not under active development. Not peer-reviewed.
@@ -23,6 +47,13 @@ Re-checked 2026-10-22 from a fresh clone: `python run.py` completed and reproduc
 | **M6** - generative | field on → two edge bands (contrast +0.96); field off → central blob (−0.62) |
 
 The wavelength is **measured** from the simulated spike trains; no line of code computes `λ = 1/[f(1/v_ep − 1/v_ax)]`.
+
+Where each number comes from: every value in the table is a field of [`results.json`](results.json)
+under its experiment's key (`M1`, `M3`, `M4`, `M5`, `M6`; for example `M3.slope_meas`, `M3.r2`,
+`M4.on.rebound_frac`, `M6.contrast_on`), written by `python run.py`, which also draws the matching
+figure in [`figs/`](figs/) (`M1_ripple.png`, `M3_scaling.png`, `M4_ablation.png`,
+`M5_speeddiff.png`, `M6_anisotropy.png`). The preprint that reports them is archived under the
+concept DOI [10.5281/zenodo.21386649](https://doi.org/10.5281/zenodo.21386649).
 
 ![M3: measured wavelength against 1/f. Five resolved points lie on a fitted line of slope 0.097, R squared 0.99, close to the dotted prediction of slope 0.092; three unresolved points are marked with crosses](figs/M3_scaling.png)
 
@@ -90,14 +121,45 @@ Frequencies are in kHz (0.040 = 40 Hz) and speeds in mm/ms. `run_condition` also
 - `paper/`: the preprint (`.md` and `.pdf`)
 - `article-1-substrate-independence.md`, `article-2-results.md`: the companion essays
 
+How `run.py` uses the simulator. Each experiment calls `run_condition` with its own array,
+frequencies, speeds and seed. M1, M3, M4 and M5 measure through `analyze`; M6 instead ranks agents
+by coherence and compares where the survivors sit. The `__main__` block runs M1, M3, M4, M5 and M6
+in that order, then writes the collected `RESULTS` dict to `results.json`.
+
 ```mermaid
-flowchart LR
-  P[speeds v_ax, v_slow and frequency f] --> S[simulate_burst x N sources]
-  S --> F[spike times]
-  F --> M[synchrony_vs_distance]
-  M --> A[analyze: measured wavelength]
-  A --> R[figs/ + results.json]
+sequenceDiagram
+    participant M as run.py M1, M3, M4, M5
+    participant M6 as run.py M6
+    participant RC as ephaptic_sim.run_condition
+    participant SB as ephaptic_sim.simulate_burst
+    participant SV as ephaptic_sim.synchrony_vs_distance
+    participant AN as ephaptic_sim.analyze
+    M->>RC: array, f, v_ax, v_slow, n_bursts, seed, slow_on
+    loop each burst
+        RC->>SB: source point, per-burst RandomState
+        SB-->>RC: fire time per agent
+    end
+    RC-->>M: list of fire-time arrays
+    M->>SV: fire times
+    SV-->>M: distance bins, baseline-corrected synchrony
+    M->>AN: synchrony curve
+    AN-->>M: lam, resolved, rebound_frac, snr, model
+    Note over M: plot against pred_lambda, write figs/*.png and RESULTS
+    M6->>RC: slow_on True, then False
+    RC-->>M6: fire times
+    Note over M6: coherence_score, prune_and_map, banding_index, then figs/M6_anisotropy.png and RESULTS
 ```
+
+| Experiment | Array | Frequency | Varied | Seed |
+|---|---|---|---|---|
+| M1 | 4x2 mm, 40x20 | 40 Hz | nothing | 1 |
+| M3 | 6x4 mm, 48x32 | 20 to 55 Hz in 5 Hz steps | frequency; slope of lam on 1/f by least squares | 3 |
+| M4 | 6x4 mm, 48x32 | 40 Hz | `slow_on` True vs False | 3 |
+| M5 | 6x4 mm, 48x32 | 40 Hz | `v_slow` 0.06 to 0.62 mm/ms | 7 |
+| M6 | 4x2 mm, 40x20 | 40 Hz | `slow_on` True vs False | 5 |
+
+`simulate_burst_static` (the fixed-wavelength control, reached with `run_condition(..., static=True)`)
+is defined but not called by `run.py`.
 
 ## Citation
 
@@ -114,6 +176,7 @@ PolyForm-Noncommercial-1.0.0. See [LICENSE](LICENSE): free to read, run, modify,
 - Preprint record: https://doi.org/10.5281/zenodo.21386649 (PDF also in [paper/](paper/))
 - Source paper: Rebbin et al., bioRxiv 2025, https://doi.org/10.1101/2025.11.03.686361
 - Pre-registered design: [testbed-spec.md](testbed-spec.md)
+- Every document, grouped by intent: [docs/README.md](docs/README.md)
 
 ## Disclosure
 
