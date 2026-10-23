@@ -169,7 +169,15 @@ That is the concept DOI, which always resolves to the latest version. Machine-re
 
 ## License
 
-PolyForm-Noncommercial-1.0.0. See [LICENSE](LICENSE): free to read, run, modify, and share for noncommercial purposes; commercial use requires a separate license from Saluca LLC. GitHub shows this licence as "Other" because it does not auto-detect PolyForm licences.
+Split by path, declared file by file in [`REUSE.toml`](REUSE.toml) ([REUSE](https://reuse.software)
+layout; the licence texts are in [`LICENSES/`](LICENSES/)):
+
+- **Code and repository docs** (`ephaptic_sim.py`, `run.py`, `requirements.txt`, README, AGENTS.md,
+  llms.txt, `docs/`): **PolyForm-Noncommercial-1.0.0**, see [LICENSE](LICENSE): free to read, run,
+  modify, and share for noncommercial purposes; commercial use requires a separate license from
+  Saluca LLC. GitHub shows this licence as "Other" because it does not auto-detect PolyForm licences.
+- **Paper, figures, data and research text** (`paper/`, `figs/`, `results.json`, the two
+  `article-*.md` files, `testbed-spec.md`): **CC-BY-NC-4.0**, the licence of the Zenodo record.
 
 ## Links
 

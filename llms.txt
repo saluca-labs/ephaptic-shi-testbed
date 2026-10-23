@@ -1,6 +1,6 @@
 # ephaptic-shi-testbed
 
-> Companion code, results and preprint for a neuron-free simulation of two-channel, two-speed interference (the ephaptic-axonal mechanism proposed by Rebbin et al., bioRxiv 2025), showing the synchrony ripple and its 1/f wavelength scaling emerge in a mesh of software agents. PolyForm-Noncommercial-1.0.0.
+> Companion code, results and preprint for a neuron-free simulation of two-channel, two-speed interference (the ephaptic-axonal mechanism proposed by Rebbin et al., bioRxiv 2025), showing the synchrony ripple and its 1/f wavelength scaling emerge in a mesh of software agents. Code PolyForm-Noncommercial-1.0.0; paper, figures and data CC-BY-NC-4.0 (the Zenodo record's licence), declared by path in REUSE.toml.
 
 Facts agents often get wrong: this is a reproduction harness for one preprint, not a library or a neuroscience model; it makes no claim about real tissue. Pure Python with numpy, scipy and matplotlib, CPU only. `python run.py` regenerates `figs/` and `results.json` in place (about 1.5 to 3.5 minutes). Frequencies in the code are in kHz and speeds in mm/ms. The archived record is concept DOI 10.5281/zenodo.21386649.
 
