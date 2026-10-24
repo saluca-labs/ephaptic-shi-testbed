@@ -1,3 +1,5 @@
+![ephaptic-shi-testbed](docs/img/banner-2026-10-23.jpg)
+
 # Ephaptic-Analog Testbed
 
 A neuron-free testbed for **two-channel, two-speed interference**, the mechanism Rebbin et al. (bioRxiv 2025, [10.1101/2025.11.03.686361](https://doi.org/10.1101/2025.11.03.686361)) propose for ephaptic-axonal shaping of neural self-organization. It is the companion code, data and preprint for researchers who want to reproduce or extend the result.
