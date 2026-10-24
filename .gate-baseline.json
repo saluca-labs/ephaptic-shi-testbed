@@ -1,0 +1,623 @@
+{
+ "version": 2,
+ "written": "2026-10-22",
+ "rule": "debt may only shrink; see repo-merge-gate.md GATE-3",
+ "note": "ids are hashes of each finding; run `python -m gate run` to see them",
+ "entries": [
+  {
+   "check": "style",
+   "id": "af115a83003703f5c22c",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "e0121f8beeb21645563b",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "de9d39319a6e47d31c5b",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "1c9ab2899fbe4b75d95b",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "dc37546c244cc0f53380",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "cbfcce9fb444c3ccfa6f",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "22f79d18e1485e23d213",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "fae4147a5acf552627b5",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "f946219c14129f8ff70f",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "6d799dc1da3a166733e6",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "19e0e1dac6266351ebd7",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "a5a6689638ec40dee789",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "98f00d6c79b9a9584525",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "6532f07a6dd7a6852454",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "a0da9e91b30469d41512",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "4cd31e32096dfd2dbeac",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "56e8b1805e4817049783",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "20eb54ca6099542cf1eb",
+   "path": "README.md"
+  },
+  {
+   "check": "style",
+   "id": "d11edf3b1e01ddc11ad9",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "4e6c61ba90cb981be80e",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "25d19b2c4766d1d3bb64",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "45e61777b59a351282d6",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "41dfc8eecdeb46761690",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "635c017188085c451bfd",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "e76603353991912bfef6",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "2305ab45ba93420abc1c",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "c28e56ace40ed11389a0",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "52a651823495d0f86444",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "30ea244920e6f1806b99",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "62a76ffd17fca91af93d",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "00bba2896fc1ad410577",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "431b8e5cca26ecd72909",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "bd33b3a2a4abd8a031f1",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "2c66f14c64ab11ca7636",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "0906d7c314f07053037e",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "ca3ad4fa78385336a978",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "86e731ff23a5152c4b10",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "e8269f00c92c143a73fa",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "c6545ce04ebd0e530d36",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "4d4c8c19b4c7777b840a",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "32d0f1cb33dd80c81d06",
+   "path": "article-1-substrate-independence.md"
+  },
+  {
+   "check": "style",
+   "id": "ec25057a6a03288bdfee",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "d6d112bcaacc5bde3a22",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "894e8f0ad31a0091a4d2",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "b6ab3441c6ec92f383b2",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "239184a12178bd903516",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "a13fd9832f5ebb925ab0",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "d78b93d6770c014a708e",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "a32cbe4f6b065e271d19",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "b5328823399f5676f7ce",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "bc06ba1ba66e469999b2",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "7b7dbea736c9508b9c9d",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "b45d1f50e8d499306acb",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "fd1a9774de3d97559731",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "bb181e8467f397379230",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "b39d58690ce6f6631059",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "6a958ba36bf76b45b3b9",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "1e2f5c483afe91c50335",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "75af92d374b28c6820f3",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "37603d9690c04564289f",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "2e8a5af1afe81a588133",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "fb65217895ecce41c34c",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "dbd7be558560cb87ac23",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "c58e858a7461a744e049",
+   "path": "article-2-results.md"
+  },
+  {
+   "check": "style",
+   "id": "ab87b25a2b164324ae93",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "821619e7f891f9f7fdc0",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "a3e45992dbdd45cf0cb9",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "99d121d7905deb9ea8cb",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "b74922af45e74f8788b0",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "b2b093294ac4558bafcd",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "608638c28bfe49b4112f",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "d01ca999e66d188f4bb5",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "554a897930b1b296ed1c",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "97a2fc970d4f587c72e2",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "2fe27730e8192c58c5e1",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "47919ed62e25cd9cee14",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "987058188beea3a3fbd5",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "2a8ceaca12895c1eeb3e",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "2b71914a19c1f71f9f28",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "f7228a3261afc643d74b",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "eac68c264f3948843f12",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "c4cafe86252aabf375ad",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "56e1588f4d514545da48",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "a0c3802671e2acb472dc",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "b8d7f833ba9794502550",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "5d515c9805600624e8cc",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "a2db2a59404581dc00d6",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "8dc5bdc3ed9416862545",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "3e85a603e729de6ffa3f",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "be99b9e1161c218d2a19",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "e1f0c29959d891c07a00",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "6873a9253806ebce8174",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "fd45f3fdd645cc4d6c8e",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "cc3077de0a618a6d1bd2",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "c9c6c9e301d6de4ec23e",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "d108eb8e39db060d0b27",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "c4e22cb9425397a38493",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "66791529a8d2cf613809",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "d588c8311226f15539b6",
+   "path": "paper/ephaptic-shi-preprint.md"
+  },
+  {
+   "check": "style",
+   "id": "b38b88a297fae9f61b7e",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "7d949912de96f4f3af81",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "08db3f18e521211ba71b",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "8f8ac5da6f20529e3e3b",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "0da8c2b10a49d3de3330",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "3405234482210815d6d2",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "839bbfde278d7a97938d",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "5072b1124a3fa47a2320",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "eeabae4062d6799f546c",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "cdcee75217e704a1302f",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "af6a7381c86a05ea22d2",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "dbbb9f6964b57b662f50",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "e83e4da876d82f2e8cf8",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "style",
+   "id": "afd77b70f5b6377c5b31",
+   "path": "testbed-spec.md"
+  },
+  {
+   "check": "test-markers",
+   "id": "94b4d8d4b8b41f757279",
+   "path": ""
+  },
+  {
+   "check": "claims",
+   "id": "a59c86aa776f4a18c505",
+   "path": ""
+  },
+  {
+   "check": "docs",
+   "id": "b4d08d8b436c35746850",
+   "path": "README.md"
+  },
+  {
+   "check": "docs",
+   "id": "778c8d0a7ee6fb263adf",
+   "path": "README.md"
+  },
+  {
+   "check": "docs",
+   "id": "aafc68c653a507b6941e",
+   "path": "README.md"
+  },
+  {
+   "check": "docs",
+   "id": "bbb1f99b140392f1906f",
+   "path": "README.md"
+  },
+  {
+   "check": "docs",
+   "id": "7fcb8037f0cbaee52798",
+   "path": "README.md"
+  },
+  {
+   "check": "docs",
+   "id": "d1d18256ebd90ac25aa0",
+   "path": "README.md"
+  },
+  {
+   "check": "docs",
+   "id": "b79ed584daf8a632b453",
+   "path": ""
+  },
+  {
+   "check": "branch-protection",
+   "id": "f0fac6b41c6325ac9702",
+   "path": ""
+  }
+ ]
+}
